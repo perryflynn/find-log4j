@@ -18,6 +18,6 @@ do
         echo "$JAR"
     fi
 
-done 3<<< "$(find / \( -fstype ext4 -or -fstype ext3 \) -type f -name "*.jar" 2> /dev/null)"
+done 3<<< "$(find / \( -fstype ext4 -or -fstype ext3 -or -fstype zfs \) -type f -name "*.jar" 2> /dev/null)"
 
 # eof
