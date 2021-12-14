@@ -19,5 +19,7 @@ gwmi win32_volume | where-object { $_.filesystem -match "ntfs" -and $_.name -mat
 			}
 
 }
-pause
+if($args[0] -ne "nopause"){
+	pause
+}
 # eof
